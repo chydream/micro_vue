@@ -13,7 +13,7 @@ let menu = {
       id: 1,
       label: '应用1',
       href: '/app/index',
-      icon: 'fa fa-home',
+      icon: 'fa fa-file-text',
       permission: ['view', 'add', 'delete', 'edit'],
       show: true,
       children: []
