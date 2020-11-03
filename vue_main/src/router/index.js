@@ -37,18 +37,70 @@ const router = new Router({
         }
       ]
     },
-    // {
-    //   path: '/app',
-    //   name: 'App',
-    //   component: () => import(/* webpackChunkName: "Home" */'../themes/cvue/layout/index'),
-    //   children: [
-    //     {
-    //       path: 'index',
-    //       name: '应用1',
-    //       component: () => import(/* webpackChunkName: "Home" */'../themes/cvue/views/app/index')
-    //     }
-    //   ]
-    // },
+    {
+      path: '/auth',
+      name: 'Auth',
+      component: () => import(/* webpackChunkName: "Home" */'../themes/cvue/layout/index'),
+      children: [
+        {
+          path: 'index',
+          name: '权限',
+          component: () => import(/* webpackChunkName: "Home" */'../themes/cvue/views/auth/auth')
+        }
+      ]
+    },
+    {
+      path: '/demo',
+      name: 'Demo',
+      component: () => import(/* webpackChunkName: "Home" */'../themes/cvue/layout/index'),
+      children: [
+        {
+          path: 'index',
+          name: '例子1',
+          component: () => import(/* webpackChunkName: "Home" */'../themes/cvue/views/demo/index')
+        },
+        {
+          path: 'faculty',
+          name: '例子2',
+          component: () => import(/* webpackChunkName: "Home" */'../themes/cvue/views/demo/grade')
+        },
+        {
+          path: 'subject',
+          name: '例子3',
+          component: () => import(/* webpackChunkName: "Home" */'../themes/cvue/views/demo/subject')
+        },
+        {
+          path: 'school-manage',
+          name: '例子4',
+          component: () => import(/* webpackChunkName: "Home" */'../themes/cvue/views/demo/schoolManage')
+        },
+        {
+          path: 'uploader',
+          name: '图片上传',
+          component: () => import(/* webpackChunkName: "Home" */'../themes/cvue/views/vueCropper/uploader')
+        },
+        {
+          path: 'work',
+          name: '工作流',
+          component: () => import(/* webpackChunkName: "Home" */'../themes/cvue/views/jsPlumb/index')
+        },
+        {
+          path: 'work-list',
+          name: '工作流1',
+          component: () => import(/* webpackChunkName: "Home" */'../themes/cvue/views/jsPlumb/flow/workFlowDesign.vue')
+        },
+        {
+          path: 'draggable',
+          name: '拖放',
+          component: () => import(/* webpackChunkName: "Home" */'../themes/cvue/views/draggable/index.vue')
+        },
+        {
+          path: 'work-flow',
+          name: '工作流2',
+          component: () => import(/* webpackChunkName: "Home" */'../themes/cvue/views/draggable/work.vue')
+        }
+      ]
+    },
     {
       path: '/',
       redirect: '/login'
