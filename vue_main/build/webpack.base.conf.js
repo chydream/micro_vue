@@ -68,12 +68,12 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   externals: {
-    'vue': 'Vue',
-    'vue-router': 'VueRouter',
-    'vuex': 'Vuex',
-    'axios': 'axios',
-    'element-ui': 'ELEMENT',
-    'cryptoJs': 'cryptoJs'
+    // 'vue': 'Vue',
+    // 'vue-router': 'VueRouter',
+    // 'vuex': 'Vuex',
+    // 'axios': 'axios',
+    // 'element-ui': 'ELEMENT',
+    // 'cryptoJs': 'cryptoJs'
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],

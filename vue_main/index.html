@@ -10,37 +10,33 @@
     <title>用户中心</title>
     <link rel="stylesheet" href="<%= htmlWebpackPlugin.options.path %>/cdn/element-ui/2.4.0/theme-chalk/index.css">
     <link rel="shortcut icon" href="<%= htmlWebpackPlugin.options.path %>/img/main/favicon.ico">
-    <!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">   -->
     <meta name="importmap-type" content="systemjs-importmap">
-  </head>
-  <body>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-    <script src="<%= htmlWebpackPlugin.options.path %>/cdn/vue/2.5.2/vue.min.js" charset="utf-8"></script>
-    <script src="<%= htmlWebpackPlugin.options.path %>/cdn/vuex/2.4.1/vuex.min.js" charset="utf-8"></script>
-    <script src="<%= htmlWebpackPlugin.options.path %>/cdn/vue-router/3.0.1/vue-router.js" charset="utf-8"></script>
-    <!-- <script src="<%= htmlWebpackPlugin.options.path %>/cdn/element-ui/2.4.0/index.js" charset="utf-8"></script> -->
-    <script src="<%= htmlWebpackPlugin.options.path %>/cdn/element-ui/2.13.2/index.js" charset="utf-8"></script>
-    <script src="<%= htmlWebpackPlugin.options.path %>/cdn/axios/1.0.0/axios.min.js" charset="utf-8"></script>
-    <script src="<%= htmlWebpackPlugin.options.path %>/cdn/aes/aes.js" charset="utf-8"></script>
-    <!-- <script src="<%= htmlWebpackPlugin.options.path %>/jsplumb/jsPlumb-2.2.8.js" charset="utf-8"></script> -->
-    <!-- <script src="<%= htmlWebpackPlugin.options.path %>/cdn/md5/md5.js"></script> -->
     <script type="systemjs-importmap">
-      {
-        "imports": {
-        "child": "http://localhost:8081/app.js",
-        "single-spa": "https://cdnjs.cloudflare.com/ajax/libs/single-spa/4.3.7/system/single-spa.min.js",
-        "vue": "https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js",
-        "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@3.0.7/dist/vue-router.min.js"
-        }
-      }
-    </script>
+		{
+		  "imports": {
+			"child": "http://localhost:8081/app.js",
+			"single-spa": "https://cdnjs.cloudflare.com/ajax/libs/single-spa/4.3.7/system/single-spa.min.js",
+			"vue": "https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js",
+			"vue-router": "https://cdn.jsdelivr.net/npm/vue-router@3.0.7/dist/vue-router.min.js"
+		  }
+		}
+	  </script>
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/single-spa/4.3.7/system/single-spa.min.js" as="script" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.1.1/system.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.1.1/extras/amd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.1.1/extras/named-exports.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.1.1/extras/named-register.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/6.1.1/extras/use-default.min.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    
+    <!-- <script src="<%= htmlWebpackPlugin.options.path %>/cdn/vue/2.5.2/vue.min.js" charset="utf-8"></script>
+    <script src="<%= htmlWebpackPlugin.options.path %>/cdn/vuex/2.4.1/vuex.min.js" charset="utf-8"></script>
+    <script src="<%= htmlWebpackPlugin.options.path %>/cdn/vue-router/3.0.1/vue-router.js" charset="utf-8"></script>
+    <script src="<%= htmlWebpackPlugin.options.path %>/cdn/element-ui/2.13.2/index.js" charset="utf-8"></script>
+    <script src="<%= htmlWebpackPlugin.options.path %>/cdn/axios/1.0.0/axios.min.js" charset="utf-8"></script>
+    <script src="<%= htmlWebpackPlugin.options.path %>/cdn/aes/aes.js" charset="utf-8"></script> -->
   </body>
-  <!-- BEGIN PAGE LEVEL PLUGINS -->
+
 </html>
