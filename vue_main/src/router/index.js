@@ -37,18 +37,18 @@ const router = new Router({
         }
       ]
     },
-    {
-      path: '/app',
-      name: 'App',
-      component: () => import(/* webpackChunkName: "Home" */'../themes/cvue/layout/index'),
-      children: [
-        {
-          path: 'index',
-          name: '应用1',
-          component: () => import(/* webpackChunkName: "Home" */'../themes/cvue/views/home/index')
-        }
-      ]
-    },
+    // {
+    //   path: '/app',
+    //   name: 'App',
+    //   component: () => import(/* webpackChunkName: "Home" */'../themes/cvue/layout/index'),
+    //   children: [
+    //     {
+    //       path: 'index',
+    //       name: '应用1',
+    //       component: () => import(/* webpackChunkName: "Home" */'../themes/cvue/views/app/index')
+    //     }
+    //   ]
+    // },
     {
       path: '/',
       redirect: '/login'

@@ -8,16 +8,16 @@ let menu = {
       permission: ['view', 'add', 'delete', 'edit'],
       show: true,
       children: []
-    },
-    {
-      id: 1,
-      label: '应用1',
-      href: '/app/index',
-      icon: 'fa fa-home',
-      permission: ['view', 'add', 'delete', 'edit'],
-      show: true,
-      children: []
     }
+    // {
+    //   id: 1,
+    //   label: '应用1',
+    //   href: '/app/index',
+    //   icon: 'fa fa-home',
+    //   permission: ['view', 'add', 'delete', 'edit'],
+    //   show: true,
+    //   children: []
+    // }
   ],
   user: [
     {
