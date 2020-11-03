@@ -10,11 +10,33 @@ export default {
     }
   },
   mounted () {
-    window.System.import('single-spa').then((res) => {
-      var singleSpa = res
-      singleSpa.registerApplication('child', () => window.System.import('child'), location => true)
-      singleSpa.start()
-    })
+    var status = localStorage.getItem('status')
+    if (!status) {
+      window.System.import('single-spa').then((res) => {
+        var singleSpa = res
+        localStorage.setItem('status', 'done')
+        if (singleSpa.getAppNames().includes('child')) {
+          console.log(singleSpa)
+          singleSpa.start()
+          return
+        }
+        singleSpa.registerApplication('child', () => {
+          const render = () => {
+            // 渲染，只执行一次
+            return window.System.import('child').then(res => {
+              // console.log(res)
+              if (res) {
+                return res
+              } else {
+                return render()
+              }
+            })
+          }
+          return render()
+        }, location => true)
+        singleSpa.start()
+      })
+    }
   },
   methods: {}
 }

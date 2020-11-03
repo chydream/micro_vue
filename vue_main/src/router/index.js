@@ -3,6 +3,10 @@ import Router from 'vue-router'
 import Layout from '@/themes/cvue/layout/index'
 
 Vue.use(Router)
+const originalPush = Router.prototype.push
+Router.prototype.push = function push (location) {
+  return originalPush.call(this, location).catch(err => err)
+}
 // 路由实例
 const router = new Router({
   scrollBehavior (to, from, savedPosition) { // 路由滚动行为
@@ -45,7 +49,12 @@ const router = new Router({
         {
           path: 'index',
           name: '应用1',
-          component: () => import(/* webpackChunkName: "Home" */'../themes/cvue/views/app/index')
+          component: () => import(/* webpackChunkName: "Home" */'../themes/cvue/views/app/index'),
+          children: [
+            {
+              path: '*'
+            }
+          ]
         }
       ]
     },

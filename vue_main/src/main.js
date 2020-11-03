@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 // 权限控制
-import './router/rolePermission'
+// import './router/rolePermission'
 // 引入element框架
 import ElementUI from 'element-ui'
 // element主题配置
