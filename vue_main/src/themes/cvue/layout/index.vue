@@ -5,7 +5,7 @@
       <el-container>
         <el-header style="height:auto;">
           <right-top></right-top>
-          <right-tags></right-tags>
+          <!-- <right-tags></right-tags> -->
         </el-header>
         <el-main class="main">
           <transition name="fade" mode="out-in">
