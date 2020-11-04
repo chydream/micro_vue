@@ -75,6 +75,7 @@ const user = {
           // console.log(res)
           commit('SET_PERMISSION', res.permissions)
           commit('SET_USER_INFO', res.user)
+          dispatch('GetMenu')
           resolve(res)
         }).catch(error => {
           reject(error)

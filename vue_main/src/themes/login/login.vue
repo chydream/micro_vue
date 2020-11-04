@@ -179,10 +179,10 @@ export default {
           }
           // console.log(params)
           this.$store.dispatch('user/Login', params).then(res => {
-            // console.log(res)
+            console.log(res)
             this.$store.dispatch('user/GetUserInfo', {access_token: res.accessToken}).then(res => {
               this.loginLoading = false
-              // console.log(res)
+              console.log(res)
               if (this.checked) {
                 setCookie('username', params.username, 24)
               } else {
