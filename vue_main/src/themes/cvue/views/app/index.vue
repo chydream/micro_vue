@@ -10,33 +10,17 @@ export default {
     }
   },
   mounted () {
-    var status = localStorage.getItem('status')
-    if (!status) {
-      window.System.import('single-spa').then((res) => {
-        var singleSpa = res
-        localStorage.setItem('status', 'done')
-        if (singleSpa.getAppNames().includes('child')) {
-          console.log(singleSpa)
-          singleSpa.start()
-          return
-        }
-        singleSpa.registerApplication('child', () => {
-          const render = () => {
-            // 渲染，只执行一次
-            return window.System.import('child').then(res => {
-              // console.log(res)
-              if (res) {
-                return res
-              } else {
-                return render()
-              }
-            })
-          }
-          return render()
-        }, location => true)
-        singleSpa.start()
-      })
-    }
+    window.System.import('single-spa').then((res) => {
+      var singleSpa = res
+      if (singleSpa.getAppNames().includes('child')) {
+        console.log(singleSpa.getMountedApps())
+        singleSpa.unloadApplication('child').then(() => {
+          console.log(singleSpa.getMountedApps())
+        })
+      }
+      singleSpa.registerApplication('child', () => window.System.import('child'), location => true)
+      singleSpa.start()
+    })
   },
   methods: {}
 }
